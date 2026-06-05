@@ -1,0 +1,153 @@
+/* pages/Search.css */
+
+.search-page {
+  width: 1920px;
+  height: 1080px;
+  background: #141414;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 48px 80px 32px;
+  border-bottom: 1px solid #333;
+  flex-shrink: 0;
+}
+
+.search-icon {
+  font-size: 36px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 16px 24px;
+  font-size: 36px;
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  caret-color: #e50914;
+}
+
+.search-input::placeholder {
+  color: #555;
+}
+
+.search-input:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.search-clear {
+  padding: 8px 16px;
+  font-size: 28px;
+  background: transparent;
+  color: #808080;
+  border: none;
+  cursor: pointer;
+}
+
+.search-clear:focus {
+  outline: 2px solid #ffffff;
+  border-radius: 4px;
+}
+
+.search-mode-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.search-mode-btn {
+  padding: 10px 24px;
+  font-size: 22px;
+  background: transparent;
+  color: #808080;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-mode-btn--active {
+  background: #232323;
+  color: #ffffff;
+  border-color: #555;
+}
+
+.search-mode-btn:focus {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Résultats */
+.search-results {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px 80px;
+}
+
+.search-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.search-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-content: flex-start;
+}
+
+.search-epg-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.search-epg-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 20px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.search-epg-item:focus {
+  background: #232323;
+  outline: 2px solid #ffffff;
+  outline-offset: -2px;
+}
+
+.search-epg-time {
+  font-size: 24px;
+  color: #808080;
+  min-width: 80px;
+}
+
+.search-epg-title {
+  font-size: 26px;
+  font-weight: 500;
+  flex: 1;
+}
+
+.search-epg-channel {
+  font-size: 22px;
+  color: #b3b3b3;
+}
+
+.search-epg-live {
+  font-size: 20px;
+  color: #e50914;
+  font-weight: 600;
+}
