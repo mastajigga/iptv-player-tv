@@ -1,0 +1,37 @@
+/* components/shell/TVShell.css */
+
+.tv-shell {
+  /* Reset TV-safe */
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+.tv-shell *,
+.tv-shell *::before,
+.tv-shell *::after {
+  box-sizing: border-box;
+}
+
+/* Focus visible obligatoire pour la navigation TV */
+.tv-shell [data-focusable]:focus {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* Supprimer le outline par défaut du navigateur (on gère nous-mêmes) */
+.tv-shell :focus:not([data-focusable]) {
+  outline: none;
+}
+
+/* Pas de scrollbar visible (TV) */
+.tv-shell::-webkit-scrollbar {
+  display: none;
+}
+
+/* Sélection désactivée (pas de souris) */
+.tv-shell {
+  user-select: none;
+  -webkit-user-select: none;
+}

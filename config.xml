@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:tizen="http://tizen.org/ns/widgets"
+        id="http://iptv-player-tv.local/app"
+        version="1.0.0"
+        viewmodes="maximized">
+    <name>IPTV Player</name>
+    <icon src="icon.png"/>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.normal.1080.1920"/>
+    <tizen:application id="YOUR_CERT_ID.iptvplayer"
+                       package="YOUR_CERT_ID"
+                       required_version="4.0"/>
+    <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://developer.samsung.com/privilege/drmplay"/>
+    <access origin="*" subdomains="true"/>
+</widget>

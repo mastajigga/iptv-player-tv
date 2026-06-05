@@ -1,0 +1,66 @@
+/* components/tiles/TileRow.css */
+
+.tile-row {
+  margin-bottom: 48px;
+  padding-left: 80px;
+}
+
+.tile-row__title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.tile-row__viewport {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 24px; /* Espace pour le zoom au focus */
+  padding-top: 8px;
+}
+
+.tile-row__slider {
+  display: flex;
+  will-change: transform;
+}
+
+/* Flèches de navigation (subtiles, desktop-only) */
+.tile-row__arrow {
+  position: absolute;
+  top: 0;
+  height: 170px;
+  width: 60px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 200ms ease;
+  z-index: 5;
+}
+
+.tile-row__viewport:hover .tile-row__arrow {
+  opacity: 1;
+}
+
+.tile-row__arrow--left {
+  left: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.tile-row__arrow--right {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+/* Sur TV, cacher les flèches (navigation clavier uniquement) */
+@media (hover: none) {
+  .tile-row__arrow {
+    display: none;
+  }
+}
